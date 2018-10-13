@@ -51,12 +51,42 @@ class NumberMatching extends Component {
         <h3>
           Click the word and then the number. Match all the pairs to continue.
         </h3>
-        <ul class="wordslist1">
-          <li>Two</li>
-          <li>Six</li>
-          <li>Four</li>
-          <li>One</li>
-          <li class="matched">Three</li>
+        <ul className="wordslist1">
+          <li
+            value="2"
+            onClick={event => this.onClickWord("wordTwo", event)}
+            className={this.state.wordTwo}
+          >
+            Two
+          </li>
+          <li
+            value="5"
+            onClick={event => this.onClickWord("wordFive", event)}
+            className={this.state.wordFive}
+          >
+            Five
+          </li>
+          <li
+            value="4"
+            onClick={event => this.onClickWord("wordFour", event)}
+            className={this.state.wordFour}
+          >
+            Four
+          </li>
+          <li
+            value="1"
+            onClick={event => this.onClickWord("wordOne", event)}
+            className={this.state.wordOne}
+          >
+            One
+          </li>
+          <li
+            value="3"
+            onClick={event => this.onClickWord("wordThree", event)}
+            className={this.state.wordThree}
+          >
+            Three
+          </li>
         </ul>
 
         <ul class="wordslist2">
