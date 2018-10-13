@@ -2,6 +2,48 @@ import React, { Component } from "react";
 import "./NumberMatching.css";
 
 class NumberMatching extends Component {
+  constructor() {
+    super();
+    this.state = {
+      dataValue: null,
+      count: 0,
+      wordOne: "",
+      wordTwo: "",
+      wordThree: "",
+      wordFour: "",
+      wordFive: "",
+      numOne: "",
+      numTwo: "",
+      numThree: "",
+      numFour: "",
+      numFive: ""
+    };
+  }
+
+  onClickWord = (word, event) => {
+    if (this.state[word] !== "matched" && this.state.count % 2 === 0) {
+      const count = this.state.count + 1;
+      this.setState({
+        [word]: "matched",
+        dataValue: event.target.value,
+        count
+      });
+    }
+  };
+
+  onClickNumber = (number, event) => {
+    if (
+      this.state.dataValue === event.target.value &&
+      this.state.count % 2 !== 0
+    ) {
+      const count = this.state.count + 1;
+      this.setState({
+        [number]: "matched",
+        count
+      });
+    }
+  };
+
   render() {
     return (
       <div class="match-quiz">
