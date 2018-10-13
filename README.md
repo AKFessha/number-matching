@@ -1,6 +1,6 @@
 # Number matching
 
-This is app allows you to match words of numbers like(one, two, there) with thier equivalent numeric symbol(1,2,3). On succesful match it displays `Congratulations! well done!!` message.
+This is a React app which allows you to match words of numbers like(one, two, three) with thier equivalent numeric symbol(1,2,3). On succesful match it displays `Congratulations! well done!!` message.
 
 ![alt text](./assets/app.JPG)
 
@@ -62,4 +62,4 @@ npm run lint
 
 ### Author
 
-Awet
+Awet Fessha

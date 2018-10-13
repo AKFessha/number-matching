@@ -5,7 +5,7 @@ class NumberMatching extends Component {
   constructor() {
     super();
     this.state = {
-      dataValue: null,
+      fieldValue: null,
       count: 0,
       wordOne: "",
       wordTwo: "",
@@ -25,7 +25,7 @@ class NumberMatching extends Component {
       const count = this.state.count + 1;
       this.setState({
         [word]: "matched",
-        dataValue: event.target.value,
+        fieldValue: event.target.value,
         count
       });
     }
@@ -33,7 +33,7 @@ class NumberMatching extends Component {
 
   onClickNumber = (number, event) => {
     if (
-      this.state.dataValue === event.target.value &&
+      this.state.fieldValue === event.target.value &&
       this.state.count % 2 !== 0
     ) {
       const count = this.state.count + 1;
@@ -46,7 +46,7 @@ class NumberMatching extends Component {
 
   render() {
     return (
-      <div class="match-quiz">
+      <div className="match-quiz">
         <h1>Match the words to the numbers</h1>
         <h3>
           Click the word and then the number. Match all the pairs to continue.
@@ -128,9 +128,7 @@ class NumberMatching extends Component {
         </ul>
         {this.state.count === 10 ? (
           <div className="response">Congratulations! Well done!!</div>
-        ) : (
-          ""
-        )}
+        ) : null}
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NumberMatching from "./components/NumberMatching";
+import NumberMatching from "./components/NumberMatching/NumberMatching";
 import "./App.css";
 
 class App extends Component {
