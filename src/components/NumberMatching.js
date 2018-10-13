@@ -89,14 +89,48 @@ class NumberMatching extends Component {
           </li>
         </ul>
 
-        <ul class="wordslist2">
-          <li class="matched">3</li>
-          <li>4</li>
-          <li>2</li>
-          <li>5</li>
-          <li>1</li>
+        <ul className="wordslist2">
+          <li
+            value="3"
+            onClick={event => this.onClickNumber("numThree", event)}
+            className={this.state.numThree}
+          >
+            3
+          </li>
+          <li
+            value="4"
+            onClick={event => this.onClickNumber("numFour", event)}
+            className={this.state.numFour}
+          >
+            4
+          </li>
+          <li
+            value="2"
+            onClick={event => this.onClickNumber("numTwo", event)}
+            className={this.state.numTwo}
+          >
+            2
+          </li>
+          <li
+            value="5"
+            onClick={event => this.onClickNumber("numFive", event)}
+            className={this.state.numFive}
+          >
+            5
+          </li>
+          <li
+            value="1"
+            onClick={event => this.onClickNumber("numOne", event)}
+            className={this.state.numOne}
+          >
+            1
+          </li>
         </ul>
-        <div class="response">Correct</div>
+        {this.state.count === 10 ? (
+          <div className="response">Congratulations! Well done!!</div>
+        ) : (
+          ""
+        )}
       </div>
     );
   }
