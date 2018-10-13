@@ -34,9 +34,8 @@ li.matched {
   margin-left: -150px;
   margin-top: -25px;
   line-height: 50px;
-  background: red;
+  background: rgb(8, 211, 150);
   color: #fff;
-  display: none;
 }
 .wordslist2 {
   margin-top: 100px;
