@@ -1,26 +1,18 @@
 # Number matching
 
-This is a React app which allows you to match words of numbers like(one, two, three) with thier equivalent numeric symbol(1,2,3). On succesful match it displays `Congratulations! well done!!` message.
+A React app which allows you to match words of numbers like (one, two, three) with thier equivalent numeric symbol (1,2,3). On succesful match it displays `Congratulations! well done!!` message.
 
 ![alt text](./assets/app.JPG)
 
 ### Libraries Used
 
-```
-HTML
-```
+#### HTML
 
-```
-CSS
-```
+#### CSS
 
-```
-JavaScript ES6
-```
+#### JavaScript ES6
 
-```
-React
-```
+#### React
 
 ### Future improvements
 
