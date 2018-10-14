@@ -19,21 +19,21 @@ class NumberMatching extends Component {
       numFive: ""
     };
   }
-
-  onClickWord = (word, event) => {
+  // e stands for event
+  onClickWord = (word, e) => {
     if (this.state[word] !== "matched" && this.state.count % 2 === 0) {
       const count = this.state.count + 1;
       this.setState({
         [word]: "matched",
-        fieldValue: event.target.value,
+        fieldValue: e.target.value,
         count
       });
     }
   };
 
-  onClickNumber = (number, event) => {
+  onClickNumber = (number, e) => {
     if (
-      this.state.fieldValue === event.target.value &&
+      this.state.fieldValue === e.target.value &&
       this.state.count % 2 !== 0
     ) {
       const count = this.state.count + 1;
@@ -54,35 +54,35 @@ class NumberMatching extends Component {
         <ul className="wordslist1">
           <li
             value="2"
-            onClick={event => this.onClickWord("wordTwo", event)}
+            onClick={e => this.onClickWord("wordTwo", e)}
             className={this.state.wordTwo}
           >
             Two
           </li>
           <li
             value="5"
-            onClick={event => this.onClickWord("wordFive", event)}
+            onClick={e => this.onClickWord("wordFive", e)}
             className={this.state.wordFive}
           >
             Five
           </li>
           <li
             value="4"
-            onClick={event => this.onClickWord("wordFour", event)}
+            onClick={e => this.onClickWord("wordFour", e)}
             className={this.state.wordFour}
           >
             Four
           </li>
           <li
             value="1"
-            onClick={event => this.onClickWord("wordOne", event)}
+            onClick={e => this.onClickWord("wordOne", e)}
             className={this.state.wordOne}
           >
             One
           </li>
           <li
             value="3"
-            onClick={event => this.onClickWord("wordThree", event)}
+            onClick={e => this.onClickWord("wordThree", e)}
             className={this.state.wordThree}
           >
             Three
@@ -92,40 +92,41 @@ class NumberMatching extends Component {
         <ul className="wordslist2">
           <li
             value="3"
-            onClick={event => this.onClickNumber("numThree", event)}
+            onClick={e => this.onClickNumber("numThree", e)}
             className={this.state.numThree}
           >
             3
           </li>
           <li
             value="4"
-            onClick={event => this.onClickNumber("numFour", event)}
+            onClick={e => this.onClickNumber("numFour", e)}
             className={this.state.numFour}
           >
             4
           </li>
           <li
             value="2"
-            onClick={event => this.onClickNumber("numTwo", event)}
+            onClick={e => this.onClickNumber("numTwo", e)}
             className={this.state.numTwo}
           >
             2
           </li>
           <li
             value="5"
-            onClick={event => this.onClickNumber("numFive", event)}
+            onClick={e => this.onClickNumber("numFive", e)}
             className={this.state.numFive}
           >
             5
           </li>
           <li
             value="1"
-            onClick={event => this.onClickNumber("numOne", event)}
+            onClick={e => this.onClickNumber("numOne", e)}
             className={this.state.numOne}
           >
             1
           </li>
         </ul>
+
         {this.state.count === 10 ? (
           <div className="response">Congratulations! Well done!!</div>
         ) : null}

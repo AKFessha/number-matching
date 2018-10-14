@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">Number Matching </header>
+        <header className="App-header"> Number matching </header>
         <NumberMatching />
       </div>
     );
